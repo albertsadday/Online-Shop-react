@@ -12,12 +12,12 @@ export const Navbar = () => {
         } hover:text-red-600 transition`}
         to={"/"}
       >
-        Inicio
+        inicio
       </Link>
       <Link
         className={`${
           pathname === "/about" && "text-red-600"
-        } hover:text-red-600 transition`}
+        } hover:text-red-100 transition`}
         to={"/about"}
       >
         Nosotros

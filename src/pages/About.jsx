@@ -10,16 +10,10 @@ export const About = () => {
         </h2>
         <div className="flex items-center justify-center gap-5">
           <p className="text-primary">
-            Bienvenido a Shopify, una tienda de ropa que ofrece una selección
-            única de prendas de vestir y accesorios de moda para hombres y
-            mujeres de todas las edades. En Shopify, nos apasiona la moda y nos
-            esforzamos por ofrecer productos de alta calidad a precios
-            asequibles para nuestros clientes.
+            Bienvenido a AluraGeek, nos apasiona la moda y nos esforzamos por ofrecer una selección única de prendas de vestir y accesorios de alta calidad para hombres y mujeres de todas las edades. Nuestra tienda en línea combina estilo, comodidad y tendencias actuales para brindarte una experiencia de compra excepcional
             <br />
-            Gracias por visitar nuestra tienda en línea. Siéntete libre de
-            explorar nuestros productos y si tienes alguna pregunta, no dudes en
-            ponerte en contacto con nosotros. ¡Esperamos que disfrutes de tu
-            experiencia de compra en nuestra tienda en línea!
+            <br />
+            ¡Gracias por tu cálida bienvenida! 🛍️ En AluraGeek, no solo ofrecemos moda de alta calidad, sino que también nos apasiona cada detalle de lo que hacemos. Queremos que te sientas como parte de nuestra comunidad apasionada por el estilo y la elegancia. Así que, adelante, explora nuestros productos con entusiasmo y si necesitas algo, no dudes en contactarnos. ¡Estamos aquí para ti! 😊👗👔👠
           </p>
           <img
             className="hidden lg:block lg:w-[450px] rounded-lg"
@@ -35,10 +29,11 @@ export const About = () => {
             Misión
           </h3>
           <p className="text-primary">
-            "Nuestra misión es proporcionar ropa elegante y cómoda a precios
-            asequibles, mientras promovemos la sostenibilidad en la moda. Nos
-            comprometemos a ofrecer productos de alta calidad y un servicio al
-            cliente excepcional a todos nuestros clientes."
+          Nuestra pasión por la moda va más allá de las tendencias. Nos esforzamos por seleccionar cuidadosamente cada prenda, considerando la calidad, el estilo y la comodidad. Creemos que la moda no debe comprometer la sostenibilidad, por lo que también nos dedicamos a promover prácticas responsables en la industria.
+
+Cuando eliges AluraGeek, no solo estás comprando ropa; estás invirtiendo en una experiencia. Nuestro servicio al cliente excepcional garantiza que cada cliente se sienta valorado y escuchado. Queremos que encuentres tu ropa predilecta con confianza y satisfacción.
+
+
           </p>
         </div>
         <div>
@@ -46,10 +41,7 @@ export const About = () => {
             Visión
           </h3>
           <p className="text-primary">
-            "Nuestra visión es convertirnos en líderes en la moda sostenible,
-            ofreciendo productos de alta calidad y promoviendo prácticas éticas
-            y respetuosas con el medio ambiente en toda la industria de la
-            moda."
+          Estilo para Todos: La moda convencional puede ser exclusiva, pero nosotros creemos en la inclusividad. Ofrecemos una amplia gama de tallas, estilos y géneros para que todos encuentren algo que refleje su personalidad y se sientan empoderados.
           </p>
         </div>
       </div>

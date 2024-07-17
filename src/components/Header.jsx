@@ -8,13 +8,14 @@ import { Navbar } from "./Navbar";
 // iconos
 import { BsBag } from "react-icons/bs";
 // logo
-import Logo from "../img/logo.svg";
+import Logo from "../img/Logo_alura_geek.svg";
+
 
 export const Header = () => {
   const [isActive, setIsActive] = useState(false);
-
   const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
+
 
   // event listener
   useEffect(() => {
@@ -31,19 +32,23 @@ export const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between h-full">
         {/* Logo */}
+        
         <Link to={"/"}>
           <div className="flex items-center gap-4">
-            <img className="w-[40px]" src={Logo} alt="Logo" />
-            <h2 className="uppercase text-xl font-bold">Shopify</h2>
+            <img className="w-[230px]" src={Logo} alt="Logo" />
+            <h2 className="uppercase text-xl font-bold"></h2>
           </div>
         </Link>
 
         {/* Menu */}
+
         <div className="flex gap-10">
           <div className="absolute right-0 left-0 bg-white w-full h-full -bottom-[70px] flex justify-center sm:bg-none sm:relative sm:right-0 sm:bottom-0">
             <Navbar />
           </div>
+
           {/* Carrito de compra */}
+
           <div
             className="cursor-pointer flex relative"
             onClick={() => setIsOpen(!isOpen)}
@@ -58,3 +63,6 @@ export const Header = () => {
     </header>
   );
 };
+
+// checar si tira error
+export default Header; 
