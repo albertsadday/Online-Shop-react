@@ -8,14 +8,12 @@ import { Navbar } from "./Navbar";
 // iconos
 import { BsBag } from "react-icons/bs";
 // logo
-import Logo from "../img/Logo_alura_geek.svg";
-
+import Logo from "../img/logo.svg";
 
 export const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
-
 
   // event listener
   useEffect(() => {
@@ -26,35 +24,28 @@ export const Header = () => {
 
   return (
     <header
-      className={`${
-        isActive ? "bg-white py-4 shadow-md" : "bg-none py-6"
-      } fixed w-full z-10 transition-all`}
+      className={`${isActive ? "bg-glass backdrop-blur-md py-4 shadow-lg" : "bg-primary py-6"
+        } fixed w-full z-20 transition-all duration-300`}
     >
       <div className="container mx-auto flex items-center justify-between h-full">
         {/* Logo */}
-        
         <Link to={"/"}>
-          <div className="flex items-center gap-4">
-            <img className="w-[230px]" src={Logo} alt="Logo" />
-            <h2 className="uppercase text-xl font-bold"></h2>
+          <div>
+            <img className="w-[40px]" src={Logo} alt="Logo" />
           </div>
         </Link>
 
-        {/* Menu */}
-
-        <div className="flex gap-10">
-          <div className="absolute right-0 left-0 bg-white w-full h-full -bottom-[70px] flex justify-center sm:bg-none sm:relative sm:right-0 sm:bottom-0">
+        {/* Menu & Cart */}
+        <div className="flex items-center gap-10">
+          <div className="hidden md:block">
             <Navbar />
           </div>
-
-          {/* Carrito de compra */}
-
           <div
-            className="cursor-pointer flex relative"
+            className="cursor-pointer flex relative group"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <BsBag className="text-2xl" />
-            <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
+            <BsBag className="text-3xl text-light group-hover:text-accent transition-all duration-300" />
+            <div className="bg-accent absolute -right-3 -bottom-3 text-[12px] w-[22px] h-[22px] text-primary font-bold rounded-full flex justify-center items-center group-hover:scale-110 transition-all duration-300 shadow-glow-accent">
               {itemAmount}
             </div>
           </div>
@@ -64,5 +55,4 @@ export const Header = () => {
   );
 };
 
-// checar si tira error
-export default Header; 
+export default Header;

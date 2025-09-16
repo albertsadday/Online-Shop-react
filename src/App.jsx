@@ -5,7 +5,6 @@ import {
   Home, 
   ProductDetails, 
   Products, 
-  About, 
   Contact, 
   Error 
 } from "./pages";
@@ -25,9 +24,7 @@ const
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/
-contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
@@ -38,4 +35,3 @@ contact" element={<Contact />} />
 };
 
 export default App;
-

@@ -19,11 +19,15 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#222222',
-        secondary: '#F5E6E0',
+        primary: '#0A192F',
+        secondary: '#00BFFF', // Deep Sky Blue - more electric
+        accent: '#00FFFF',   // Cyan/Aqua - very electric
+        light: '#E0F2FE',
+        "glass": "rgba(10, 25, 47, 0.85)",
       },
-      backgroundImage: {
-        hero: "url('./img/bg_hero.svg')",
+      boxShadow: {
+        'glow-accent': '0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF',
+        'glow-secondary': '0 0 5px #00BFFF, 0 0 10px #00BFFF',
       },
     },
   },

@@ -5,38 +5,30 @@ export const Navbar = () => {
   const { pathname } = location;
 
   return (
-    <nav className="flex items-center gap-3 font-medium text-primary">
+    <nav className="flex items-center gap-6 font-semibold text-lg text-light">
       <Link
-        className={`${
-          pathname === "/" && "text-red-600"
-        } hover:text-red-600 transition`}
+        className={`relative ${pathname === "/" ? "text-accent" : "hover:text-accent"
+          } transition-all duration-300 group`}
         to={"/"}
       >
-        inicio
+        Home
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
       </Link>
       <Link
-        className={`${
-          pathname === "/about" && "text-red-600"
-        } hover:text-red-100 transition`}
-        to={"/about"}
-      >
-        Nosotros
-      </Link>
-      <Link
-        className={`${
-          pathname === "/products" && "text-red-600"
-        } hover:text-red-600 transition`}
+        className={`relative ${pathname === "/products" ? "text-accent" : "hover:text-accent"
+          } transition-all duration-300 group`}
         to={"/products"}
       >
-        Productos
+        Products
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
       </Link>
       <Link
-        className={`${
-          pathname === "/contact" && "text-red-600"
-        } hover:text-red-600 transition`}
+        className={`relative ${pathname === "/contact" ? "text-accent" : "hover:text-accent"
+          } transition-all duration-300 group`}
         to={"/contact"}
       >
-        Contáctanos
+        Contact
+        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
       </Link>
     </nav>
   );

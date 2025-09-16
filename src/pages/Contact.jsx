@@ -21,17 +21,17 @@ export const Contact = () => {
   };
   return (
     <>
-      <div className="mt-[140px] sm:mt-20 max-w-screen-md mx-auto p-5">
+      <div className="bg-primary mt-[95px] text-light sm:mt-20 max-w-screen-lg mx-auto p-8 rounded-xl shadow-2xl">
         {errorInput && (
-          <div className="bg-red-500 text-white font-medium text-center py-2 rounded mb-5">
+          <div className="bg-red-500/80 backdrop-blur-sm text-white font-semibold text-center py-3 rounded-lg mb-6 shadow-lg">
             <strong>¡Error!</strong>
             <br />
-            Tienes que llenar todos los campos.
+            You have to fill all the fields.
           </div>
         )}
-        <div className="text-center mb-10">
-          <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
-            Contá<span className="text-indigo-600">ctanos</span>
+        <div className="text-center mb-12">
+          <h3 className="text-4xl sm:text-5xl leading-normal font-extrabold tracking-tight text-accent">
+            Contact <span className="text-light">Us</span>
           </h3>
         </div>
 
@@ -39,32 +39,32 @@ export const Contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-light/80 text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
-                Nombre:
+                Name:
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                className="appearance-none block w-full bg-glass backdrop-blur-md text-light border-secondary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-glass-2 focus:border-accent shadow-inner"
                 id="grid-first-name"
                 type="text"
-                placeholder="Ingrese su nombre"
+                placeholder="Enter your name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="w-full md:w-1/2 px-3">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-light/80 text-xs font-bold mb-2"
                 htmlFor="grid-last-name"
               >
-                Apellidos:
+                Last Name:
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-glass backdrop-blur-md text-light border-secondary rounded py-3 px-4 leading-tight focus:outline-none focus:bg-glass-2 focus:border-accent shadow-inner"
                 id="grid-last-name"
                 type="text"
-                placeholder="Ingrese sus apellidos"
+                placeholder="Enter your last name"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
@@ -73,13 +73,13 @@ export const Contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-light/80 text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
-                Correo Electrónico:
+                Email:
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-glass backdrop-blur-md text-light border-secondary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-glass-2 focus:border-accent shadow-inner"
                 id="grid-email"
                 type="email"
                 placeholder="correo@correo.com"
@@ -92,25 +92,25 @@ export const Contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-light/80 text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
-                Mensaje:
+                Message:
               </label>
               <textarea
-                rows="10"
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                placeholder="Ingrese su mensaje"
+                rows="8"
+                className="appearance-none block w-full bg-glass backdrop-blur-md text-light border-secondary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-glass-2 focus:border-accent shadow-inner"
+                placeholder="Enter your message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
-            <div className="flex justify-center w-full px-3">
+            <div className="flex justify-center w-full px-3 mt-4">
               <button
-                className="shadow bg-indigo-600 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
+                className="shadow-lg bg-accent hover:bg-accent/80 focus:shadow-outline focus:outline-none text-primary font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-glow-accent"
                 type="submit"
               >
-                Enviar mensaje
+                Send Message
               </button>
             </div>
           </div>
